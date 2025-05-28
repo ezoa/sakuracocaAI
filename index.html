@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SakuraCocoa AI - Transforming Cocoa Traceability with AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #4A2C12 0%, #8B5A2B 50%, #D2691E 100%);
+        }
+        
+        .sdg-card {
+            transition: all 0.3s ease;
+        }
+        
+        .sdg-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #D2691E;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -50px;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #8B5A2B;
+            border: 3px solid #fff;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <!--img src="https://via.placeholder.com/50x50" alt="CacaoScope AI Logo" class="h-10"-->
+                    <span class="ml-2 text-xl font-bold text-gray-800">CacaoScope AI</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-amber-800">Home</a>
+                    <a href="#about" class="text-gray-800 hover:text-amber-800">About</a>
+                    <a href="#solution" class="text-gray-800 hover:text-amber-800">Solution</a>
+                    <a href="#impact" class="text-gray-800 hover:text-amber-800">Impact</a>
+                    <a href="#team" class="text-gray-800 hover:text-amber-800">Team</a>
+                    <a href="#invest" class="text-gray-800 hover:text-amber-800">Invest</a>
+                    <a href="#contact" class="px-4 py-2 bg-amber-700 text-white rounded-md hover:bg-amber-800 transition">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-gray-800 text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Transforming Cocoa Traceability with AI</h1>
+                <p class="text-xl mb-8">Empowering Côte d'Ivoire's cocoa farmers with cutting-edge AI technology to ensure transparency, quality, and fair compensation in the supply chain.</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#solution" class="px-8 py-3 bg-white text-amber-800 font-semibold rounded-md hover:bg-gray-100 transition text-center">Learn More</a>
+                    <a href="#invest" class="px-8 py-3 border-2 border-white text-white font-semibold rounded-md hover:bg-white hover:text-amber-800 transition text-center">Partner With Us</a>
+                </div>
+            </div>
+            <div class="md:w-1/2">
+                <!--img src="https://images.unsplash.com/photo-1575224300306-1b8da36134ec?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cocoa Farmer" class="rounded-lg shadow-2xl"--> 
+                <img src="img/woman.jpeg"  alt="Cocoa Farmer" width="80%"  class="rounded-lg shadow-2xl"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">The Cocoa Industry Challenge</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Lack of Transparency</h3>
+                    <p class="text-gray-600">Current systems make it impossible to verify cocoa origins and quality claims, leading to distrust in the supply chain.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="text-xl  font-bold text-gray-800  mb-3">Farmer Underpayment</h3>
+                    <p class="text-gray-600">Farmers receive only 6-7% of chocolate's retail price, trapped in cycles of poverty despite producing a luxury good.</p>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                    <div class="text-amber-700 text-4xl mb-4">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3 class="text-xl  font-bold text-gray-800  mb-3">Compliance Risks</h3>
+                    <p class="text-gray-600">New EU deforestation laws require proof of sustainable sourcing, creating urgent need for verifiable traceability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">About CacaoScope AI</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <!--img src="https://images.unsplash.com/photo-1595475207225-4282f49e0c77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Cocoa Beans" class="rounded-lg shadow-lg"-->
+                    <img src="img/cocoa-farmer-in-Ghana-1024x683.jpg.optimal.jpg">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-bold text-gray-800  mb-4">Our Mission</h3>
+                    <p class="text-gray-600 mb-6">To revolutionize cocoa traceability in Côte d'Ivoire using AI-powered technology that ensures transparency, improves quality, and increases farmer incomes while meeting global sustainability standards.</p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800  mb-4">Our Vision</h3>
+                    <p class="text-gray-600">We envision a cocoa industry where every bean can be traced to its origin, where farmers are fairly compensated for quality, and where chocolate brands can confidently verify their sustainability claims.</p>
+                </div>
+            </div>
+            
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">The Market Opportunity</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xl font-medium mb-3 text-amber-800">$138 Billion Industry</h4>
+                        <p class="text-gray-600 mb-6">The global chocolate market is valued at $138 billion, with growing consumer demand for ethically sourced products.</p>
+                        
+                        <h4 class="text-xl font-medium mb-3 text-amber-800">45% of Global Cocoa</h4>
+                        <p class="text-gray-600">Côte d'Ivoire produces 45% of the world's cocoa, making it the ideal location to implement transformative traceability solutions.</p>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-medium mb-3 text-amber-800">First-Mover Advantage</h4>
+                        <p class="text-gray-600 mb-6">Current traceability solutions are manual and unreliable. Our AI-powered approach creates a defensible competitive edge.</p>
+                        
+                        <h4 class="text-xl font-medium mb-3 text-amber-800">Regulatory Tailwinds</h4>
+                        <p class="text-gray-600">New EU regulations requiring proof of sustainable sourcing create urgent demand for verifiable traceability solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our AI-Powered Solution</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">How CacaoScope AI Works</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item mb-8">
+                            <h4 class="text-xl font-medium text-gray-800 mb-2">1. Farmer Registration</h4>
+                            <p class="text-gray-600">Farmers are onboarded with biometric verification, creating tamper-proof digital identities.</p>
+                        </div>
+                        
+                        <div class="timeline-item mb-8">
+                            <h4 class="text-xl font-medium text-gray-800 mb-2">2. Quality Assessment</h4>
+                            <p class="text-gray-600">Our mobile app uses AI to grade cocoa bean quality through image recognition and sensor data.</p>
+                        </div>
+                        
+                        <div class="timeline-item mb-8">
+                            <h4 class="text-xl font-medium text-gray-800 mb-2">3. Secure Tracking</h4>
+                            <p class="text-gray-600">Each batch receives a unique QR code linked to blockchain for immutable tracking through the supply chain.</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4 class="text-xl font-medium text-gray-800 mb-2">4. Data Insights</h4>
+                            <p class="text-gray-600">Cooperatives and brands access real-time dashboards with quality metrics and sustainability analytics.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Technology in Agriculture" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+            
+            <div class="text-center mb-12">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Key Features</h3>
+                <p class="text-gray-600 max-w-3xl mx-auto">Our comprehensive solution combines multiple technologies to create an end-to-end traceability system.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="feature-icon bg-amber-100 text-amber-700">
+                        <i class="fas fa-brain text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">AI Grading</h4>
+                    <p class="text-gray-600">Machine learning models assess bean quality with 95% accuracy.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="feature-icon bg-amber-100 text-amber-700">
+                        <i class="fas fa-mobile-alt text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Offline App</h4>
+                    <p class="text-gray-600">Works without internet in remote farming areas.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="feature-icon bg-amber-100 text-amber-700">
+                        <i class="fas fa-qrcode text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">QR Tracking</h4>
+                    <p class="text-gray-600">Unique codes for batch-level traceability.</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="feature-icon bg-amber-100 text-amber-700">
+                        <i class="fas fa-link text-3xl"></i>
+                    </div>
+                    <h4 class="text-xl font-medium text-gray-800 mb-2">Blockchain</h4>
+                    <p class="text-gray-600">Immutable record of transactions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Benefits for All Stakeholders</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-amber-800">For Farmers</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-700 mt-1 mr-2"></i>
+                            <span>Increased income through quality-based pricing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-700 mt-1 mr-2"></i>
+                            <span>Access to premium markets</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-700 mt-1 mr-2"></i>
+                            <span>Digital identity and financial inclusion</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-amber-800">For Cooperatives</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-700 mt-1 mr-2"></i>
+                            <span>Operational efficiency in quality control</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-700 mt-1 mr-2"></i>
+                            <span>Better negotiation power with buyers</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-700 mt-1 mr-2"></i>
+                            <span>Compliance with international standards</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4 text-amber-800">For Chocolate Brands</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-700 mt-1 mr-2"></i>
+                            <span>Verifiable sustainability claims</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-700 mt-1 mr-2"></i>
+                            <span>Compliance with EU deforestation laws</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-700 mt-1 mr-2"></i>
+                            <span>Premium product differentiation</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Impact</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Social Impact</h3>
+                    <p class="text-gray-600 mb-6">CacaoScope AI directly addresses poverty and inequality in cocoa farming communities by creating a more equitable value distribution.</p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl font-medium  mb-2 text-amber-800">Farmer Empowerment</h4>
+                            <p class="text-gray-600">Our system gives farmers visibility into the true value of their crops and connects them directly with premium buyers.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-medium mb-2 text-amber-800">Income Increase</h4>
+                            <p class="text-gray-600">By enabling quality-based pricing, farmers can increase their incomes by 20-30% compared to current commodity pricing.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-medium mb-2 text-amber-800">Gender Equity</h4>
+                            <p class="text-gray-600">We specifically support women farmers who often face additional barriers in accessing fair markets.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Environmental Impact</h3>
+                    <p class="text-gray-600 mb-6">Our solution promotes sustainable farming practices and helps combat deforestation in cocoa-growing regions.</p>
+                    
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl font-medium mb-2 text-amber-800">Deforestation Monitoring</h4>
+                            <p class="text-gray-600">GPS tracking of farm boundaries helps prevent encroachment into protected forests.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-medium mb-2 text-amber-800">Sustainable Practices</h4>
+                            <p class="text-gray-600">Farmers adopting agroforestry and other sustainable methods receive premium pricing incentives.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-medium mb-2 text-amber-800">Carbon Credits</h4>
+                            <p class="text-gray-600">Future integration with carbon credit markets will provide additional income streams for climate-positive farming.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-lg">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800 text-center">Alignment with Sustainable Development Goals</h3>
+                <p class="text-gray-600 text-center mb-8 max-w-3xl mx-auto">CacaoScope AI contributes directly to multiple UN Sustainable Development Goals, creating measurable impact beyond just business metrics.</p>
+                
+                <div class="grid sm:grid-cols-2 md:grid-cols-5 gap-6">
+                    <div class="sdg-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-blue-800 font-bold text-xl">1</span>
+                        </div>
+                        <h4 class="font-medium text-gray-800">No Poverty</h4>
+                    </div>
+                    
+                    <div class="sdg-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-green-800 font-bold text-xl">8</span>
+                        </div>
+                        <h4 class="font-medium text-gray-800 ">Decent Work</h4>
+                    </div>
+                    
+                    <div class="sdg-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-purple-800 font-bold text-xl">9</span>
+                        </div>
+                        <h4 class="font-medium text-gray-800">Innovation</h4>
+                    </div>
+                    
+                    <div class="sdg-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="bg-yellow-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-yellow-800 font-bold text-xl">12</span>
+                        </div>
+                        <h4 class="font-medium text-gray-800">Responsible Consumption</h4>
+                    </div>
+                    
+                    <div class="sdg-card bg-white p-4 rounded-lg shadow-md text-center">
+                        <div class="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <span class="text-red-800 font-bold text-xl">13</span>
+                        </div>
+                        <h4 class="font-medium text-gray-800">Climate Action</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pilot Section -->
+    <section class="py-16 bg-amber-800 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Pilot Program & Traction</h2>
+                <div class="w-24 h-1 bg-white mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2">5</div>
+                    <div class="text-xl">Cooperatives</div>
+                    <p class="text-amber-100 mt-2">Participating in pilot phase</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2">250+</div>
+                    <div class="text-xl">Farmers</div>
+                    <p class="text-amber-100 mt-2">Already onboarded</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="text-4xl font-bold mb-2">3</div>
+                    <div class="text-xl">Chocolate Brands</div>
+                    <p class="text-amber-100 mt-2">Expressed interest</p>
+                </div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-xl mb-6">"The CacaoScope AI system has transformed how we assess quality and connect with buyers. For the first time, we can prove our beans are sustainably grown."</p>
+                <p class="font-semibold">— Cooperative Leader, San Pedro Region</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Sustainable Business Model</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Revenue Streams</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-white p-5 rounded-lg shadow-md">
+                            <h4 class="text-xl font-mediumtext-gray-800 mb-2 text-amber-800">Coop Licensing</h4>
+                            <p class="text-gray-600">Annual SaaS fee charged to cooperatives for access to the platform.</p>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-lg shadow-md">
+                            <h4 class="text-xl font-medium text-gray-800 mb-2 text-amber-800">Certification Fee</h4>
+                            <p class="text-gray-600">Percentage of premium paid by brands for certified sustainable cocoa.</p>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-lg shadow-md">
+                            <h4 class="text-xl font-medium text-gray-800 mb-2 text-amber-800">Data Insights</h4>
+                            <p class="text-gray-600">Premium analytics for brands on quality trends and sustainability metrics.</p>
+                        </div>
+                        
+                        <div class="bg-white p-5 rounded-lg shadow-md">
+                            <h4 class="text-xl font-medium text-gray-800 mb-2 text-amber-800">IoT Device Lease</h4>
+                            <p class="text-gray-600">Monthly fee for moisture and temperature sensors used in quality control.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Projected Growth</h3>
+                    <img src="img/mobile_view_Cocoa_Beans_Market_Overview...jpg" alt="Revenue Projection Chart" class="rounded-lg shadow-lg w-full">
+                    <p class="text-gray-600 mt-4 text-center">Conservative projections show profitability within 3 years with 20% cooperative market penetration.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Team</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div class="flex flex-col md:flex-row items-center">
+                    <img src="img/team/natsuko.jpeg" alt="Natsuko Ando" class="rounded-full w-32 h-32 object-cover mb-4 md:mb-0 md:mr-6 border-4 border-amber-100">
+                    <div>
+                        <h3 class="text-xl font-semibold">Natsuko Ando</h3>
+                        <p class="text-amber-700 font-medium mb-2">Co-Founder & CEO</p>
+                        <p class="text-gray-600">Former agri-tech entrepreneur with 8 years experience in West African agricultural development. Fluent in Japanese, English and French.</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center">
+                    <img src="img/team/serges.jpeg" alt="Gnona Dovi Ayi Serge" class="rounded-full w-32 h-32 object-cover mb-4 md:mb-0 md:mr-6 border-4 border-amber-100">
+                    <div>
+                        <h3 class="text-xl font-semibold">Gnona Dovi Ayi Serge</h3>
+                        <p class="text-amber-700 font-medium mb-2">Co-Founder & CTO</p>
+                        <p class="text-gray-600">Ivorian software engineer specializing in AI applications for agriculture. Developed mobile solutions for 50,000+ farmers across West Africa.</p>
+                    </div>
+                </div>
+
+
+              
+
+
+                <div class="flex flex-col md:flex-row items-center">
+                    <img src="img/team/ezoa.png" alt="Ezoa" class="rounded-full w-32 h-32 object-cover mb-4 md:mb-0 md:mr-6 border-4 border-amber-100">
+                    <div>
+                        <h3 class="text-xl font-semibold">Ezoa</h3>
+                        <p class="text-amber-700 font-medium mb-2">AI Engineer</p>
+                        <p class="text-gray-600">Ivorian software engineer specializing in AI applications for agriculture. Developed mobile solutions for 50,000+ farmers across West Africa.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mb-8">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">Advisors & Partners</h3>
+                <p class="text-gray-600 max-w-3xl mx-auto">Our team is supported by experts in cocoa sustainability, AI technology, and African agricultural development.</p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="bg-gray-50 px-6 py-3 rounded-full">
+                    <p class="font-medium text-gray-800">AI Engineering Team</p>
+                </div>
+                <div class="bg-gray-50 px-6 py-3 rounded-full">
+                    <p class="font-medium text-gray-800 ">Cocoa Sustainability Experts</p>
+                </div>
+                <div class="bg-gray-50 px-6 py-3 rounded-full">
+                    <p class="font-medium text-gray-800">Logistics Partners</p>
+                </div>
+                <div class="bg-gray-50 px-6 py-3 rounded-full">
+                    <p class="font-medium text-gray-800">Agricultural Extension Network</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Section -->
+    <section id="invest" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Investment Opportunity</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gray-800 p-8 rounded-lg mb-12">
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Why Invest in CacaoScope AI?</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h4 class="text-xl font-medium mb-3 text-amber-400">Market Potential</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                                    <span>$138B global chocolate market demanding traceability</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                                    <span>First scalable solution for Côte d'Ivoire's cocoa sector</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                                    <span>Regulatory tailwinds from EU deforestation laws</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-medium mb-3 text-amber-400">Competitive Advantage</h4>
+                            <ul class="space-y-3">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                                    <span>Proprietary AI grading technology</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                                    <span>Existing pilot traction with cooperatives</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                                    <span>Local team with deep sector expertise</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-amber-800 p-8 rounded-lg">
+                    <h3 class="text-2xl font-semibold mb-6 text-center">Seed Funding Round</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 mb-8">
+                        <div>
+                            <h4 class="text-xl font-medium mb-3">Funding Goal</h4>
+                            <p class="text-3xl font-bold mb-2">$150,000</p>
+                            <p class="text-amber-100">To scale pilot and develop full platform</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-medium mb-3">Use of Funds</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span>Pilot Implementation</span>
+                                    <span class="font-medium">40%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Software Development</span>
+                                    <span class="font-medium">30%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Operations</span>
+                                    <span class="font-medium">20%</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Legal & Contingency</span>
+                                    <span class="font-medium">10%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <p class="text-xl  mb-6">Join us in building the future of ethical, transparent cocoa.</p>
+                        <a href="#contact" class="px-8 py-3 bg-white text-amber-800 font-semibold rounded-md hover:bg-gray-100 transition inline-block">Connect for Investment Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="text-amber-700 mr-4 mt-1">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium">Email</h4>
+                                <p class="text-gray-600">info@japanconnect.org</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-amber-700 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium">Location</h4>
+                                <p class="text-gray-600">Abidjan, Côte d'Ivoire</p>
+                                <p class="text-gray-600">Tokyo, Japan</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-amber-700 mr-4 mt-1">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-medium">Availability</h4>
+                                <p class="text-gray-600">Monday - Friday: 9am - 5pm GMT</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="text-lg font-medium mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-600 hover:text-amber-700">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-amber-700">
+                                <i class="fab fa-twitter text-2xl"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-amber-700">
+                                <i class="fab fa-facebook text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                <option value="">Select a subject</option>
+                                <option value="investment">Investment Inquiry</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="media">Media Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-amber-700 text-white py-3 rounded-md hover:bg-amber-800 transition font-medium">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <!--img src="https://via.placeholder.com/50x50" alt="CacaoScope AI Logo" class="h-8"-->
+                        <span class="ml-2 text-xl font-bold">CacaoScope AI</span>
+                    </div>
+                    <p class="text-gray-400">Transforming cocoa traceability and quality in Côte d'Ivoire using AI technology.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About</a></li>
+                        <li><a href="#solution" class="text-gray-400 hover:text-white transition">Solution</a></li>
+                        <li><a href="#impact" class="text-gray-400 hover:text-white transition">Impact</a></li>
+                        <li><a href="#team" class="text-gray-400 hover:text-white transition">Team</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to get updates on our progress.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md focus:outline-none text-gray-800 w-full">
+                        <button class="bg-amber-700 px-4 py-2 rounded-r-md hover:bg-amber-800 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-700 text-center text-gray-400">
+                <p>&copy; 2023 CacaoScope AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            // This would toggle a mobile menu in a real implementation
+            alert('Mobile menu would open here in a full implementation');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
